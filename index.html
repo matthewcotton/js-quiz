@@ -36,7 +36,7 @@
                     <!-- Intro Content -->
                     <div id="intro">
                         <h2 class="row justify-content-center">Whitchurch, Shropshire</h2>
-                        <p class="row justify-content-center">This quiz is about my home town, Whitchurch Shropshire.
+                        <p class="row justify-content-center">This quiz is about my home town. Whitchurch, Shropshire.
                             It's a hard quiz. Good luck.</p>
                         <a href="https://www.francisfrith.com/whitchurch/whitchurch-a-busy-high-street-1901_47183x"
                             target="_blank"><img src="resources/Whitchurch-High-Street.jpg"
@@ -48,6 +48,16 @@
                         </div>
                     </div>
 
+                    <!-- Results -->
+                    <div id="results" class="row justify-content-center">
+                        <h3>Results</h3>
+                        <p id="result-text"></p>
+                        <!-- Results button (Add to last question in place of "Next Question" button) -->
+                        <div id="submit-button" class="justify-content-center">
+                            <input id="show-results" type="button" value="Show Results" class="btn btn-success" onclick="showResults(10)">
+                        </div>
+                    </div>
+
                     <form id="quiz-form"></form>
                     <!-- Question 1 -->
                     <div id="q1" class="question">
@@ -55,23 +65,23 @@
                             <h3>1. What is the town know for being the home of?</h3>
                         </div>
                         <div class="row justify-content-center">
-                            <input type="radio" name="q1" id="1a" value="1">
+                            <input type="radio" name="q1" id="1a" class="answer" value="1">
                             <label for="1a" class="">a) Tower clocks</label>
                         </div>
                         <div class="row justify-content-center">
-                            <input type="radio" name="q1" id="1b" value="0">
+                            <input type="radio" name="q1" id="1b" class="answer" value="0">
                             <label for="1b" class="">b) Gingerbread</label>
                         </div>
                         <div class="row justify-content-center">
-                            <input type="radio" name="q1" id="1c" value="0">
+                            <input type="radio" name="q1" id="1c" class="answer" value="0">
                             <label for="1c" class="">c) Railways</label>
                         </div>
                         <div class="row justify-content-center">
-                            <input type="radio" name="q1" id="1d" value="0">
+                            <input type="radio" name="q1" id="1d" class="answer" value="0">
                             <label for="1d" class="">d) Steel</label>
                         </div>
                         <div class="row justify-content-center">
-                            <input type="button" value="Next Question" class="btn btn-success"
+                            <input type="button" value="Next Question" class="btn btn-success nextQ"
                                 onclick="nextQuestion(1)">
                         </div>
                     </div>
@@ -98,7 +108,7 @@
                             <label for="2d" class="">d) Meredune</label>
                         </div>
                         <div class="row justify-content-center">
-                            <input type="button" value="Next Question" class="btn btn-success"
+                            <input type="button" value="Next Question" class="btn btn-success nextQ"
                                 onclick="nextQuestion(2)">
                         </div>
                     </div>
@@ -125,7 +135,7 @@
                             <label for="3d" class="">d) Red Cow</label>
                         </div>
                         <div class="row justify-content-center">
-                            <input type="button" value="Next Question" class="btn btn-success"
+                            <input type="button" value="Next Question" class="btn btn-success nextQ"
                                 onclick="nextQuestion(3)">
                         </div>
                     </div>
@@ -152,7 +162,7 @@
                             <label for="4d" class="">d) Limestone Link</label>
                         </div>
                         <div class="row justify-content-center">
-                            <input type="button" value="Next Question" class="btn btn-success"
+                            <input type="button" value="Next Question" class="btn btn-success nextQ"
                                 onclick="nextQuestion(4)">
                         </div>
                     </div>
@@ -179,7 +189,7 @@
                             <label for="5d" class="">d) Leeds and Liverpool Canal</label>
                         </div>
                         <div class="row justify-content-center">
-                            <input type="button" value="Next Question" class="btn btn-success"
+                            <input type="button" value="Next Question" class="btn btn-success nextQ"
                                 onclick="nextQuestion(5)">
                         </div>
                     </div>
@@ -206,7 +216,7 @@
                             <label for="6d" class="">d) Sir Edward German</label>
                         </div>
                         <div class="row justify-content-center">
-                            <input type="button" value="Next Question" class="btn btn-success"
+                            <input type="button" value="Next Question" class="btn btn-success nextQ"
                                 onclick="nextQuestion(6)">
                         </div>
                     </div>
@@ -234,7 +244,7 @@
                             <label for="7d" class="">d) The Who</label>
                         </div>
                         <div class="row justify-content-center">
-                            <input type="button" value="Next Question" class="btn btn-success"
+                            <input type="button" value="Next Question" class="btn btn-success nextQ"
                                 onclick="nextQuestion(7)">
                         </div>
                     </div>
@@ -242,8 +252,7 @@
                     <!-- Question 8 -->
                     <div id="q8" class="question">
                         <div class="row justify-content-center">
-                            <h3>7. Which band played in the old Town Hall Ballroom (now the location of the Civic
-                                Centre) on 19 January 1963?</h3>
+                            <h3>8. Whose embalmed heart is buried under the porch of St Alkmund’s Church?</h3>
                         </div>
                         <div class="row justify-content-center">
                             <input type="radio" name="q8" id="8a" value="0">
@@ -262,7 +271,7 @@
                             <label for="8d" class="">d) Sir John Talbot, 1st Earl of Shrewsbury</label>
                         </div>
                         <div class="row justify-content-center">
-                            <input type="button" value="Next Question" class="btn btn-success"
+                            <input type="button" value="Next Question" class="btn btn-success nextQ"
                                 onclick="nextQuestion(8)">
                         </div>
                     </div>
@@ -290,7 +299,7 @@
                             <label for="9d" class="">d) Jethro</label>
                         </div>
                         <div class="row justify-content-center">
-                            <input type="button" value="Next Question" class="btn btn-success"
+                            <input type="button" value="Next Question" class="btn btn-success nextQ"
                                 onclick="nextQuestion(9)">
                         </div>
                     </div>
@@ -318,17 +327,12 @@
                         </div>
                         <!-- Results button (Add to last question in place of "Next Question" button) -->
                         <div id="submit-button" class="justify-content-center">
-                            <input type="button" value="Results" class="btn btn-success" onclick="results(10)">
+                            <input type="button" value="Results" class="btn btn-success" id="result-btn" onclick="results(10)">
                         </div>
                     </div>
 
                     </form>
 
-                    <!-- Results -->
-                    <div id="results" class="row justify-content-center">
-                        <h3>Results</h3>
-                        <p id="result-text"></p>
-                    </div>
                 </div>
             </div>
         </div>
