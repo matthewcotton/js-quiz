@@ -4,7 +4,7 @@ body {
 
 .question, #results {
     display: none;
-    
+    margin-top: 1rem;
 }
 
 #quiz-title {

@@ -27,8 +27,33 @@ function results(numOfQs) {
     }
 
     // Add and show results text
-    document.getElementById("result-text").innerHTML = "You scored " + score + " out of 10";
+    //document.getElementById("result-text").innerHTML = "You scored " + score + " out of 10";
+    document.getElementById("result-text").innerHTML = rating(score, numOfQs);
     show("results");
+}
+
+function rating(score, maxScore) {
+
+    let scoreText = "You scored " + score +" out of " + maxScore + ".";
+
+    let percentage = score / maxScore * 100;
+
+    // For greater than or equal to 70%
+    if (percentage >= 70) {
+        return "Amazing! " + scoreText + " I think you must have read every sign on every display at the <a href='http://www.whitchurch-heritage.co.uk/' target='_blank'>Heritage Centre.</a>";
+    }
+    // For 50% to 69%
+    else if (percentage >= 50) {
+        return "Pretty Good! " + scoreText + " I suggest <a href='https://goo.gl/maps/W3sHtTWxopHKeQMG6' target='_blank'>visiting</a> to learn some more.";
+    }
+    // For 30% to 49%
+    else if (percentage >= 30) {
+        return "Not Great! " + scoreText + " You have a lot to learn. Maybe start with the <a href='https://en.wikipedia.org/wiki/Whitchurch,_Shropshire' target='blank'>Wikipedia page.</a>";
+    }
+    // For less than 30%
+    else {
+        return "Rubbish! " + scoreText + " I'd give up now if I were you.";
+    }
 }
 
 
@@ -136,7 +161,6 @@ function showResults(numOfQs) {
         // Disable all radio buttons so that answers cannot be changed. 
         for (let i = 1; i <= numOfQs; i++) {
             disableRadioBtns("q" + i);
-            console.log("q" + i);
         }
 
         // Show all questions
