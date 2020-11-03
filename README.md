@@ -1,2 +1,2 @@
-# js-quiz
-Website using JavaScript to implement a quiz. Project 4 of The Developer Academy Software Developer Bootcamp.
+# Whitchucrh Quiz
+A quiz about my home town (Whitchurch, Shropshire) using JavaScript. Project 4 of The Developer Academy Software Developer Bootcamp.
